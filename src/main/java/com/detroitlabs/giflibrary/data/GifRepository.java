@@ -15,7 +15,7 @@ public class GifRepository {
             new Gif("toobad", LocalDate.of(2019, 2, 23), "Erika Languirand", true, 3),
             new Gif("exhausting", LocalDate.of(2019, 2, 23), "Jen Bloomer", false, 2),
             new Gif("headtilt", LocalDate.of(2019, 2, 23), "Dan Newport", true,1),
-            new Gif("corgibeg", LocalDate.of(2019, 2, 23), "Matt of Lansing", false, 1),
+            new Gif("headtilt2", LocalDate.of(2019, 2, 23), "Matt of Lansing", false, 1),
             new Gif("hugemistake", LocalDate.of(2019, 2, 23), "Erika Languirand", true, 3),
             new Gif("whatisaid", LocalDate.of(2019, 2, 23), "Dan Newport", true, 2)
     );
@@ -42,7 +42,7 @@ public class GifRepository {
     public List<Gif> searchResults(String gifName){
         List<Gif> gifsFromSearch = new ArrayList<>();
         for (Gif gif: ALL_GIFS){
-            if (ALL_GIFS.contains(gifName)){
+            if (gif.getName().contains(gifName)){
                 gifsFromSearch.add(gif);
             }
         }
